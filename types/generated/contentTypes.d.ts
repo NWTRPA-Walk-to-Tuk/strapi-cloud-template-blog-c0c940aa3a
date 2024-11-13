@@ -507,7 +507,8 @@ export interface ApiSponsorSponsor extends Struct.CollectionTypeSchema {
       Schema.Attribute.SetMinMaxLength<{
         maxLength: 256;
       }>;
-    image: Schema.Attribute.Media<'images' | 'files'>;
+    image: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
     level: Schema.Attribute.Enumeration<
       ['diamond', 'platinum', 'gold', 'bronze']
     > &
