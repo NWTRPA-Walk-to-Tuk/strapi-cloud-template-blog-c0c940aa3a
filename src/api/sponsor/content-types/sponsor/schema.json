@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sponsors",
+  "info": {
+    "singularName": "sponsor",
+    "pluralName": "sponsors",
+    "displayName": "Sponsor",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "maxLength": 64,
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "link": {
+      "type": "string",
+      "regex": "^(https?:\\/\\/)?(www\\.)?([a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,}(:\\d+)?(\\/\\S*)?$",
+      "default": "https://"
+    },
+    "level": {
+      "type": "enumeration",
+      "enum": [
+        "diamond",
+        "platinum",
+        "gold",
+        "bronze"
+      ],
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "maxLength": 256,
+      "required": true
+    }
+  }
+}
