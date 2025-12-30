@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_shared_heroes",
+  "info": {
+    "displayName": "Hero"
+  },
+  "options": {},
+  "attributes": {
+    "header_segment1": {
+      "type": "string"
+    },
+    "header_segment2": {
+      "type": "string"
+    },
+    "body": {
+      "type": "text"
+    }
+  }
+}
