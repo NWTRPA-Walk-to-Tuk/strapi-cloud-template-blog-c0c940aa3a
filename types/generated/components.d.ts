@@ -3,12 +3,14 @@ import type { Schema, Struct } from '@strapi/strapi';
 export interface SharedHero extends Struct.ComponentSchema {
   collectionName: 'components_shared_heroes';
   info: {
+    description: '';
     displayName: 'Hero';
   };
   attributes: {
     body: Schema.Attribute.Text;
     header_segment1: Schema.Attribute.String;
     header_segment2: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
   };
 }
 
@@ -21,6 +23,7 @@ export interface SharedLabelTitleDescriptionSection
   };
   attributes: {
     body: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     label: Schema.Attribute.String;
     title: Schema.Attribute.String;
   };
