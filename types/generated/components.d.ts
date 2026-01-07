@@ -64,6 +64,18 @@ export interface SharedRichText extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedSectionStyleB extends Struct.ComponentSchema {
+  collectionName: 'components_shared_section_style_bs';
+  info: {
+    displayName: 'SectionStyleB';
+  };
+  attributes: {
+    body1: Schema.Attribute.Blocks;
+    body2: Schema.Attribute.Blocks;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface SharedSeo extends Struct.ComponentSchema {
   collectionName: 'components_shared_seos';
   info: {
@@ -99,6 +111,7 @@ declare module '@strapi/strapi' {
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;
+      'shared.section-style-b': SharedSectionStyleB;
       'shared.seo': SharedSeo;
       'shared.slider': SharedSlider;
     }

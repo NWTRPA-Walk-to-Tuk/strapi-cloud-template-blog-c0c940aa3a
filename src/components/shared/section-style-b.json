@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_shared_section_style_bs",
+  "info": {
+    "displayName": "SectionStyleB"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "body1": {
+      "type": "blocks"
+    },
+    "body2": {
+      "type": "blocks"
+    }
+  }
+}

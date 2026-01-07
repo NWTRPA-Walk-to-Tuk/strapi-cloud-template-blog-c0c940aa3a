@@ -428,8 +428,7 @@ export interface ApiFaqPageFaqPage extends Struct.SingleTypeSchema {
       'shared.label-title-description-section',
       false
     >;
-    section2_body: Schema.Attribute.Blocks;
-    section2_title: Schema.Attribute.String;
+    section2: Schema.Attribute.Component<'shared.section-style-b', false>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -626,9 +625,7 @@ export interface ApiPrizePagePrizePage extends Struct.SingleTypeSchema {
       'shared.label-title-description-section',
       false
     >;
-    section2_body1: Schema.Attribute.Text;
-    section2_body2: Schema.Attribute.Blocks;
-    section2_title: Schema.Attribute.String;
+    section2: Schema.Attribute.Component<'shared.section-style-b', false>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
