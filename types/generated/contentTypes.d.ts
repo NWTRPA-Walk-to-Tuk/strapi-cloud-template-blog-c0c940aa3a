@@ -565,6 +565,42 @@ export interface ApiNewsArticleNewsArticle extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiPrizePagePrizePage extends Struct.SingleTypeSchema {
+  collectionName: 'prize_pages';
+  info: {
+    description: '';
+    displayName: 'Prize Page';
+    pluralName: 'prize-pages';
+    singularName: 'prize-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    hero: Schema.Attribute.Component<'shared.hero', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::prize-page.prize-page'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    section1: Schema.Attribute.Component<
+      'shared.label-title-description-section',
+      false
+    >;
+    section2_body1: Schema.Attribute.Text;
+    section2_body2: Schema.Attribute.Blocks;
+    section2_title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiPrizePrize extends Struct.CollectionTypeSchema {
   collectionName: 'prizes';
   info: {
@@ -1174,6 +1210,7 @@ declare module '@strapi/strapi' {
       'api::footer.footer': ApiFooterFooter;
       'api::home-page.home-page': ApiHomePageHomePage;
       'api::news-article.news-article': ApiNewsArticleNewsArticle;
+      'api::prize-page.prize-page': ApiPrizePagePrizePage;
       'api::prize.prize': ApiPrizePrize;
       'api::sponsor.sponsor': ApiSponsorSponsor;
       'plugin::content-releases.release': PluginContentReleasesRelease;
