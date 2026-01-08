@@ -476,21 +476,18 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
       'shared.label-title-description-section',
       false
     >;
-    section5: Schema.Attribute.Component<
+    section5: Schema.Attribute.Component<'shared.section-style-c', false>;
+    section6: Schema.Attribute.Component<
       'shared.label-title-description-section',
       false
     >;
-    section6: Schema.Attribute.Component<
+    section7: Schema.Attribute.Component<
       'shared.label-title-description-section',
       false
     >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    WCAC_members_images: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios',
-      true
-    >;
   };
 }
 
