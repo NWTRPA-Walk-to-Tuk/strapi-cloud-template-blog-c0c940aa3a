@@ -4,7 +4,8 @@
   "info": {
     "singularName": "faq",
     "pluralName": "faqs",
-    "displayName": "Faq"
+    "displayName": "Faq",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -19,6 +20,11 @@
     "content": {
       "type": "blocks",
       "required": true
+    },
+    "video_link": {
+      "type": "string",
+      "regex": "^(https?:\\/\\/)?(www\\.)?([a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,}(:\\d+)?(\\/\\S*)?$",
+      "default": "https://"
     }
   }
 }

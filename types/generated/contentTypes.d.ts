@@ -438,6 +438,7 @@ export interface ApiFaqPageFaqPage extends Struct.SingleTypeSchema {
 export interface ApiFaqFaq extends Struct.CollectionTypeSchema {
   collectionName: 'faqs';
   info: {
+    description: '';
     displayName: 'Faq';
     pluralName: 'faqs';
     singularName: 'faq';
@@ -462,6 +463,8 @@ export interface ApiFaqFaq extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    video_link: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'https://'>;
   };
 }
 
