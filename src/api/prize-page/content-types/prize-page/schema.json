@@ -1,0 +1,31 @@
+{
+  "kind": "singleType",
+  "collectionName": "prize_pages",
+  "info": {
+    "singularName": "prize-page",
+    "pluralName": "prize-pages",
+    "displayName": "Prize Page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "section1": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.label-title-description-section"
+    },
+    "hero": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.hero"
+    },
+    "section2": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.section-style-b"
+    }
+  }
+}
