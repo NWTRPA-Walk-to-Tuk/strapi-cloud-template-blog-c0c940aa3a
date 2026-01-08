@@ -17,11 +17,10 @@
       "repeatable": false,
       "component": "shared.label-title-description-section"
     },
-    "section2_title": {
-      "type": "string"
-    },
-    "section2_body": {
-      "type": "blocks"
+    "section2": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.section-style-b"
     }
   }
 }

@@ -22,14 +22,10 @@
       "repeatable": false,
       "component": "shared.hero"
     },
-    "section2_title": {
-      "type": "string"
-    },
-    "section2_body1": {
-      "type": "text"
-    },
-    "section2_body2": {
-      "type": "blocks"
+    "section2": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.section-style-b"
     }
   }
 }
