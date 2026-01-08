@@ -32,12 +32,12 @@
       "repeatable": false,
       "component": "shared.label-title-description-section"
     },
-    "section5": {
+    "section6": {
       "type": "component",
       "repeatable": false,
       "component": "shared.label-title-description-section"
     },
-    "section6": {
+    "section7": {
       "type": "component",
       "repeatable": false,
       "component": "shared.label-title-description-section"
@@ -47,16 +47,10 @@
       "repeatable": false,
       "component": "shared.hero"
     },
-    "WCAC_members_images": {
-      "type": "media",
-      "multiple": true,
-      "required": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
+    "section5": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.section-style-c"
     }
   }
 }
